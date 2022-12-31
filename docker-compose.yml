@@ -1,0 +1,14 @@
+version: "3.9"
+
+services:
+  mail_agent:
+    build: "./mailagent"
+    env_file: "./mailagent/env.list"
+    ports:
+      - "8081:8081"
+    volumes:
+      - "./mailagent:/opt/aramse/mailagent"
+  ui:
+    build:  "./industries"
+    ports:
+      - "8082:8081"
