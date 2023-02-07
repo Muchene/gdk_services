@@ -11,4 +11,4 @@ services:
   ui:
     build:  "./industries"
     ports:
-      - "8082:8081"
+      - "80:80"
